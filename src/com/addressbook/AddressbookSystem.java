@@ -9,8 +9,6 @@ import java.sql.Statement;
 public class AddressbookSystem {
     //Retrieve data from addressbook system.
     public  void retrieveData() {
-        //UC2 :Ability for Employee Payroll Service to retrieve the Employee Payroll from the Database
-
         try {
             //1.Load a driver
             Class.forName("com.mysql.cj.jdbc.Driver");
@@ -30,7 +28,7 @@ public class AddressbookSystem {
             Statement statement = connection.createStatement();
             ResultSet set = statement.executeQuery(query);
 
-            while (set.next()) {   // Retrieve all data from employee_payroll table.
+            while (set.next()) {   // Retrieve all data from address_book table.
                 System.out.println("FirstName : " + set.getString(1));
                 System.out.println("LastName : " + set.getString(2));
                 System.out.println("Address : " + set.getString(3));
